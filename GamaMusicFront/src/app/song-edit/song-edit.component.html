@@ -1,0 +1,31 @@
+<div class="container-fluid mx-2">
+    <h1 class="titulo">Editar Cancion</h1>
+
+   <form  #miFormulario="ngForm" (ngSubmit)="editarInformacion(miFormulario.value)" style="width: 98.5%;">
+        <div class="form-group">
+          <label for="Name">Nombre</label>
+          <input type="text" ngModel class="form-control form-box" name = "Name" id="Name"  [(ngModel)]="datos.BfName" required >
+        </div>
+
+        <div class="form-group">
+            <label for="FK_Album">Album</label>
+            <input type="text" ngModel class="form-control form-box" name="FK_Album" id="FK_Album"   [(ngModel)]="datos.BfFK_Album" required>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Año</label>
+            <input type="number" ngModel class="form-control form-box" name="year" id="year" min=1500  [(ngModel)]="datos.BfYear" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Gender">Genero</label>
+            <input type="text" ngModel class="form-control form-box" name="Gender" id="Gender"  [(ngModel)]="datos.BfGender" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Duracion">Duracion</label>
+            <input type="text" ngModel class="form-control form-box" name="Length" id="Length"   [(ngModel)]="datos.BfLength" required>
+        </div>
+        <button type="submit" class="btn btn-primary my-2">Editar</button>
+      </form>  
+</div>

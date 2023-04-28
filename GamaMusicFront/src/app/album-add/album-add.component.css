@@ -1,0 +1,12 @@
+.formLabel{
+    display: block;
+}
+.formL{
+    display: inline-block;
+}
+.form-box{
+    border: 1px solid;
+}
+.titulo{
+    text-align: center;
+}

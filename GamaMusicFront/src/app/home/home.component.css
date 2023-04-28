@@ -1,0 +1,21 @@
+.table-bordered{
+    border: 2px;
+}
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+}
+.tableRow{
+    font-weight: normal;
+}
+.tableH{
+    text-align: center;
+}
+.tableLeft{
+    float: left;
+    width: 40%;
+}
+.tableRight{
+    float: right;
+    width: 40%;
+}

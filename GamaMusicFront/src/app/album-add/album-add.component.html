@@ -1,0 +1,25 @@
+<div class="container-fluid mx-2">
+    <h1 class="titulo">Agregar Album</h1>
+
+    <form  #miFormulario="ngForm" (ngSubmit)="guardarInformacion(miFormulario.value)" style="width: 98.5%;">
+        <div class="form-group">
+          <label for="Name">Nombre</label>
+          <input type="text" ngModel class="form-control form-box" name = "Name" id="Name" placeholder="Marcianos de la pradera" required >
+        </div>
+
+        
+        <div class="form-group">
+            <label for="FK_Artist">Artista</label>
+            <input type="text" ngModel class="form-control form-box" name="FK_Artist" id="FK_Artist" placeholder="Artista existente" required>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Año</label>
+            <input type="number" ngModel class="form-control form-box" name="year" id="year" min=1500 placeholder="de 1500 en adelante" required>
+        </div>
+        <button type="submit" class="btn btn-primary my-2">Añadir</button>
+      </form>
+
+      
+</div>
+

@@ -1,0 +1,79 @@
+<div class="container-fluid mx-2">
+
+
+
+    <h1 class="titulo">Nuestras Canciones</h1>
+      <table class="table table-bordered table-hover" style="width: 99%;">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Album</th>
+            <th scope="col">Año</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Duracion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let song of this.songs">
+          <th class="tableRow"> {{song.Name}} </th>
+          <th class="tableRow"> {{song.FKAlbum}} </th>
+          <th class="tableRow"> {{song.year}} </th>
+          <th class="tableRow"> {{song.Gender}} </th>
+          <th class="tableRow"> {{song.Length}} </th>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="tableLeft">
+        <h1 class="titulo">Nuestros Albums</h1>
+        <table class="table table-bordered table-hover" style="width: 99%;">
+            <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Artista</th>
+                <th scope="col">Año</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let album of this.albums">
+            <th class="tableRow"> {{album.Name}} </th>
+            <th class="tableRow"> {{album.FKArtist}} </th>
+            <th class="tableRow"> {{album.year}} </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tableRight">
+        <h1 class="titulo">Nuestros Artistas</h1>
+        <table class="table table-bordered table-hover" style="width: 99%;">
+            <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nacionalidad</th>
+                <th scope="col">Año</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let artist of this.artist">
+            <th class="tableRow"> {{artist.Name}} </th>
+            <th class="tableRow"> {{artist.Nationality}} </th>
+            <th class="tableRow"> {{artist.year}} </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- <div *ngFor="let sonog of songs" class="songsList">
+    <p>song.Name</p>
+</div> -->

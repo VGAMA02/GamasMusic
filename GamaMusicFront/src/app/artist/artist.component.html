@@ -1,0 +1,44 @@
+<div class="container-fluid mx-2">
+    <h1 class="titulo"> Vista de Administrador</h1>
+    
+    
+<!--     <button onclick="this.DeleteSong()"  mat-fab color="primary" aria-label="">
+        <mat-icon>delete</mat-icon>
+    </button> -->
+    <div class="registerBox py-2">
+        <h1 class="my-1"  style="width: 25%; float: left;">Registrar Nuevo Artista</h1>
+        <button  [routerLink]="['/artistadd']">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+    
+    
+    <h1 class="titulo">Nuestros Artistas</h1>
+    <table class="table table-bordered table-hover" style="width: 99%;">
+      <thead>
+        <tr>
+          <th scope="col">Accion</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Album</th>
+          <th scope="col">Año</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let artist of this.artists">
+        <th>
+            <button (click)="DeleteArtist(artist.Name,artist.Nationality,artist.year)"  mat-fab color="primary" class="mx-2">
+            <mat-icon>delete</mat-icon>
+            </button>
+
+            <button (click)="EditArtist(artist.Name,artist.Nationality,artist.year)"  mat-fab color="primary">
+                <mat-icon>edit</mat-icon>
+            </button>
+       </th>
+        <th class="tableRow"> {{artist.Name}} </th>
+        <th class="tableRow"> {{artist.Nationality}} </th>
+        <th class="tableRow"> {{artist.year}} </th>
+      </tr>
+      </tbody>
+    </table>
+
+</div> <!--  -->

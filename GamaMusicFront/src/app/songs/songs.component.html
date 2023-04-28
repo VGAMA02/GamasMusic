@@ -1,0 +1,48 @@
+<div class="container-fluid mx-2">
+    <h1 class="titulo"> Vista de Administrador</h1>
+    
+    
+<!--     <button onclick="this.DeleteSong()"  mat-fab color="primary" aria-label="">
+        <mat-icon>delete</mat-icon>
+    </button> -->
+    <div class="registerBox py-2">
+        <h1 class="my-1"  style="width: 25%; float: left;">Registrar Nueva cancion</h1>
+        <button  [routerLink]="['/songsadd']">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+    
+    
+    <h1 class="titulo">Nuestras Canciones</h1>
+    <table class="table table-bordered table-hover" style="width: 99%;">
+      <thead>
+        <tr>
+          <th scope="col">Accion</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Album</th>
+          <th scope="col">Año</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Duracion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let song of this.songs">
+        <th>
+            <button (click)="DeleteSong(song.Name,song.FKAlbum,song.year,song.Gender)"  mat-fab color="primary" class="mx-2">
+            <mat-icon>delete</mat-icon>
+            </button>
+
+            <button (click)="EditSong(song.Name,song.FKAlbum,song.year,song.Gender,song.Length)"  mat-fab color="primary">
+                <mat-icon>edit</mat-icon>
+            </button>
+       </th>
+        <th class="tableRow"> {{song.Name}} </th>
+        <th class="tableRow"> {{song.FKAlbum}} </th>
+        <th class="tableRow"> {{song.year}} </th>
+        <th class="tableRow"> {{song.Gender}} </th>
+        <th class="tableRow"> {{song.Length}} </th>
+      </tr>
+      </tbody>
+    </table>
+
+</div> <!--  -->

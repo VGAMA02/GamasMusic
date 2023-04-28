@@ -1,0 +1,55 @@
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+.table-bordered{
+    border: 2px;
+}
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+}
+.tableRow{
+    font-weight: normal;
+}
+.tableH{
+    text-align: center;
+}
+.tableLeft{
+    float: left;
+    width: 40%;
+}
+.tableRight{
+    float: right;
+    width: 40%;
+}
+.registerBox{
+    background-color: rgb(211, 211, 211);
+    border: 2px solid;
+    color: black;
+    -ms-flex-align: start;
+}
